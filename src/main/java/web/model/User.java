@@ -9,23 +9,25 @@ import javax.persistence.*;
 public class User {
 
    @Id
-   @Column(name = "id")
+//   @Column(name = "id")
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private long id;
 
-   @Column(name = "username")
+//   @Column(name = "username") В сущности убери все аннотации @Column,
+//   она не обязательна, если твои поля в сущности и в базе данных совпадают
+//   по названиям, ее можно не ставить.
    private String username;
 
-   @Column(name = "name")
+//   @Column(name = "name")
    private String firstName;
 
-   @Column(name = "last_name")
+//   @Column(name = "last_name")
    private String lastName;
 
-   @Column(name = "email")
+//   @Column(name = "email")
    private String email;
 
-   @Column(name = "age")
+//   @Column(name = "age")
    private byte age;
 
    public User() {

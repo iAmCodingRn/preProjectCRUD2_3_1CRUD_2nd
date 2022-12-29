@@ -13,7 +13,8 @@ import java.util.Optional;
 @Service
 public class UserServiceImpl implements UserService {
 
-    UserDao userDao;
+    private final UserDao userDao;
+    //В классах где ты внедряешь зависимость, поля созданы без фодификаторов доступа, а должны быть private final.
 
     @Autowired
     protected UserServiceImpl(UserDao userDao) {

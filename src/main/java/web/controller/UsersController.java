@@ -55,7 +55,7 @@ public class UsersController {
 
     @PostMapping("edit")
     public String updateUserInfo(@ModelAttribute("user") User user) {
-        System.out.println(user);
+//        System.out.println(user);  В классе контроллеров убери System.out.println(user);
         userService.updateUser(user);
         return "redirect:/users";
     }
